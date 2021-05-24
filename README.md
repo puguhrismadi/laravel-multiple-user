@@ -50,6 +50,8 @@ Buatlah sebuah database baru di dalam phpmyadmin dengan nama laravel. Karena nam
  `npm run dev`
 
  sampai tahap ini kalian sudah berhasil membuat aplikasi laravel dengan autentikasi. Silahkan jalankan project dengan mengetikkan perintah php artisan. Hasilnya akan tampil 2 menu di pojok kanan atas layar, yaitu menu login dan register. Berikut ini adalah halaman register laravel.  
+ ![Register Form](screenshot/3.png)
+
 
   - 3.3. Silahkan daftarkan 3 akun yang berbeda ke dalam aplikasi laravel kalian. Lalu buka phpmyadmin dan lihat!, datanya akan tampil seperti gambar di bawah ini. Secara default semua data yang didaftarkan rolenya adalah pembeli maka kita perlu merubah rolenya menjadi admin, penjual, dan pembeli. Karena di tahap selanjutnya kita akan membuat akses yang berbeda untuk tiap akun tersebut. 
 
