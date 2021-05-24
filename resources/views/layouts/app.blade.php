@@ -30,19 +30,24 @@
         {{ config('app.name', 'Laravel') }}
     </a>
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        @if(Auth::check())
+        @if(Auth::user()->role == 'admin')
         <li class="nav-item">
             <a class="nav-link" aria-current="page" href="{{url('admin')}}">Halaman Admin</a>
         </li>
-        @if(Auth::check())
-            @if(Auth::user()->role == 'hubin')
+        @endif
+   
+        @if(Auth::user()->role == 'hubin')
         <li class="nav-item">
             <a class="nav-link" href="{{url('hubin')}}">Halaman Hubin</a>
         </li>
-            @endif
         @endif
+           
         <li class="nav-item">
             <a class="nav-link" href="{{url('siswa')}}">Halaman Siswa</a>
         </li>
+
+        @endif
     </ul>
     {{-- end navigas --}}
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

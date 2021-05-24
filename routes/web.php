@@ -24,4 +24,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('admin', function () { return view('admin'); });
 Route::get('hubin','HubinController@index')->name('hubin');;
-Route::get('siswa', function () { return view('pembeli'); });
+Route::get('siswa', function () { return view('siswa'); });
