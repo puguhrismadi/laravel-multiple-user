@@ -14,10 +14,11 @@ Projek ini adalah projek laravel di projek Aplikasi Tata Kelola Surat Menyurat d
 - Level user Admin.
 - Level User Petugas Bidang Hubungan Industri (hubin)
 - Level User Siswa 
-# belum di buat view
+#### belum di buat view
 - level user Kepala Program (kaprog)
 - level user Wakil kepala Sekolah (waka)
 
+~~ Level user admin dapat melihat dashboard hubin dan siswa sementara level user hubin dapat melihat dashboard hubin dan siswa , sedangkan siswa hanya dapat melihat dashboard siswa saja ~~
 
 ## 1. Install Laravel
 
@@ -183,3 +184,5 @@ Dalam projek ini admin dapat mengakses halaman hubin, home, dan siswa dan tidak 
 ![dashboard hubin ](screenshot/siswa.png)
 
  Sekian tutorial cara mudah membuat multi user di laravel dengan middleware. Semoga bermanfaat, kurang lebihnya saya mohon maaf. Dan apabila ada pertanyaan silahkan tinggalkan di kolom komentar di bawah ini dan mari kita diskusikan bersama. Sampai jumpa di tutorial pemrograman lainnya.
+
+ mau belajar ngeBlog Codingan di github bisa cek [link ini ](https://medium.com/@saumya.ranjan/how-to-write-a-readme-md-file-markdown-file-20cb7cbcd6f)
