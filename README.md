@@ -14,6 +14,9 @@ Projek ini adalah projek laravel di projek Aplikasi Tata Kelola Surat Menyurat d
 - Level user Admin.
 - Level User Petugas Bidang Hubungan Industri (hubin)
 - Level User Siswa 
+# belum di buat view
+- level user Kepala Program (kaprog)
+- level user Wakil kepala Sekolah (waka)
 
 
 ## 1. Install Laravel
@@ -115,20 +118,30 @@ Buatlah sebuah database baru di dalam phpmyadmin dengan nama laravel. Karena nam
 
  Buka halaman home.blade.php yang terletak di dalam folder `resources/views/layouts/app.blade.php`. Copy script di bawah ini dan pastekan di bawah <div class="container">
 ```c#
-<a class="navbar-brand" href="{{ url('/') }}">
-    {{ config('app.name', 'Laravel') }}
-</a>
-<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-    <li class="nav-item">
-        <a class="nav-link" aria-current="page" href="{{url('admin')}}">Halaman Admin</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{url('penjual')}}">Halaman Penjual</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{url('pembeli')}}">Halaman Pembeli</a>
-    </li>
-</ul>
+
+    <a class="navbar-brand" href="{{ url('/') }}">
+        {{ config('app.name', 'Laravel') }}
+    </a>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        @if(Auth::check())
+        @if(Auth::user()->role == 'admin')
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{{url('admin')}}">Halaman Admin</a>
+        </li>
+        @endif
+   
+        @if(Auth::user()->role == 'hubin')
+        <li class="nav-item">
+            <a class="nav-link" href="{{url('hubin')}}">Halaman Hubin</a>
+        </li>
+        @endif
+           
+        <li class="nav-item">
+            <a class="nav-link" href="{{url('siswa')}}">Halaman Siswa</a>
+        </li>
+
+        @endif
+    </ul>
 ```
 
 
