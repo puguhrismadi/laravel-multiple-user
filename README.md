@@ -170,16 +170,16 @@ Route::get('siswa', function () { return view('siswa'); });
  ```
 ## Percobaan
 Dalam projek ini admin dapat mengakses halaman hubin, home, dan siswa dan tidak sebaliknya. Middleware berfungsi untuk mengautentikasi http request yang masuk ke server. Jika user adalah admin maka routing ke halaman pembeli dan penjual dapat dilakukan dan tidak sebaliknya. Jalankan perintah php artisan untuk menjalankan project
-# home dengan menu register dan login
+#### home dengan menu register dan login
 ![home page dengan menu register ](screenshot/2.png)
 
-# dashboard halaman admin
+#### dashboard halaman admin
 ![dashboard hubin ](screenshot/admin.png)
 
-# dashboard halaman hubin
+#### dashboard halaman hubin
 ![dashboard hubin ](screenshot/1.png)
 
-# dashboard halaman siswa
+#### dashboard halaman siswa
 ![dashboard hubin ](screenshot/siswa.png)
 
  Sekian tutorial cara mudah membuat multi user di laravel dengan middleware. Semoga bermanfaat, kurang lebihnya saya mohon maaf. Dan apabila ada pertanyaan silahkan tinggalkan di kolom komentar di bawah ini dan mari kita diskusikan bersama. Sampai jumpa di tutorial pemrograman lainnya.
