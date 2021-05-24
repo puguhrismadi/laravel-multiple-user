@@ -23,11 +23,11 @@ Installah sebuah fresh laravel versi 7 dengan menjalankan perintah berikut ini d
 
 ## 2. Persiapan Database dan Migration
 
-Buatlah sebuah database baru di dalam phpmyadmin dengan nama laravel. Karena nama database yang kita buat adalah laravel, maka kita tidak perlu mengedit file '.env'. Tapi jika kalian ingin nama database yang berbeda, kalian juga harus mengedit nama database di dalam file '.env'
+Buatlah sebuah database baru di dalam phpmyadmin dengan nama laravel. Karena nama database yang kita buat adalah laravel, maka kita tidak perlu mengedit file `.env`. Tapi jika kalian ingin nama database yang berbeda, kalian juga harus mengedit nama database di dalam file `.env`
 
  Setelah membuat sebuah database baru, selanjutnya masuk ke dalam project latihan_middleware dan buka folder database → migrations → 2014_10_12_000000_create_users_table.php. Lalu ubahlah isi dari public function up() dengan script yang ada di bawah ini 
 
- '''Sql
+ ```Sql
  Schema::create('users', function (Blueprint $table) {
     $table->id();
     $table->string('name');
