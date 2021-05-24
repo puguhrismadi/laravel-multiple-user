@@ -18,7 +18,7 @@ Projek ini adalah projek laravel di projek Aplikasi Tata Kelola Surat Menyurat d
 - level user Kepala Program (kaprog)
 - level user Wakil kepala Sekolah (waka)
 
-~~ Level user admin dapat melihat dashboard hubin dan siswa sementara level user hubin dapat melihat dashboard hubin dan siswa , sedangkan siswa hanya dapat melihat dashboard siswa saja ~~
+~~ `Level user admin dapat melihat dashboard hubin dan siswa sementara level user hubin dapat melihat dashboard hubin dan siswa , sedangkan siswa hanya dapat melihat dashboard siswa saja` ~~
 
 ## 1. Install Laravel
 
