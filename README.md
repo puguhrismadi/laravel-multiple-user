@@ -7,29 +7,37 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+## About Simple Login Multiple User Auth Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Projek ini adalah projek laravel di projek Aplikasi Tata Kelola Surat Menyurat di Sekolah, Level user yang ada dalam projek sederhana ini terdiri dari :
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Level user Admin.
+- Level User Petugas Bidang Hubungan Industri (hubin)
+- Level User Siswa 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## Langkah Pertama : Install Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Install Laravel
+Installah sebuah fresh laravel versi 7 dengan menjalankan perintah berikut ini di terminal atau cmd kalian. composer create-project --prefer-dist laravel/laravel:^7.0 latihan_middleware   
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 2. Persiapan Database dan Migration
 
-## Laravel Sponsors
+Buatlah sebuah database baru di dalam phpmyadmin dengan nama laravel. Karena nama database yang kita buat adalah laravel, maka kita tidak perlu mengedit file '.env'. Tapi jika kalian ingin nama database yang berbeda, kalian juga harus mengedit nama database di dalam file '.env'
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+ Setelah membuat sebuah database baru, selanjutnya masuk ke dalam project latihan_middleware dan buka folder database → migrations → 2014_10_12_000000_create_users_table.php. Lalu ubahlah isi dari public function up() dengan script yang ada di bawah ini 
+
+ '''Sql
+ Schema::create('users', function (Blueprint $table) {
+    $table->id();
+    $table->string('name');
+    $table->string('email')->unique();
+    $table->timestamp('email_verified_at')->nullable();
+    $table->string('password');
+    $table->enum('role', ['admin', 'penjual', 'pembeli'])->default('pembeli');
+    $table->rememberToken();
+    $table->timestamps();
+});'''
 
 ### Premium Partners
 
