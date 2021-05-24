@@ -53,7 +53,8 @@ Buatlah sebuah database baru di dalam phpmyadmin dengan nama laravel. Karena nam
  ![Register Form](screenshot/3.png)
 
 
-  - 3.3. Silahkan daftarkan 3 akun yang berbeda ke dalam aplikasi laravel kalian. Lalu buka phpmyadmin dan lihat!, datanya akan tampil seperti gambar di bawah ini. Secara default semua data yang didaftarkan rolenya adalah pembeli maka kita perlu merubah rolenya menjadi admin, penjual, dan pembeli. Karena di tahap selanjutnya kita akan membuat akses yang berbeda untuk tiap akun tersebut. 
+  - 3.3. Silahkan daftarkan 3 akun yang berbeda ke dalam aplikasi laravel kalian. Lalu buka phpmyadmin dan lihat!, datanya akan tampil seperti gambar di bawah ini. Secara default semua data yang didaftarkan rolenya adalah pembeli maka kita perlu merubah rolenya menjadi admin, hubin, dan siswa. Karena di tahap selanjutnya kita akan membuat akses yang berbeda untuk tiap akun tersebut. 
+  ![tabel user ](screenshot/tabel.png)
 
 ## 4. Membuat Middleware dan Setting Middleware
 
@@ -167,5 +168,12 @@ Route::get('admin', function () { return view('admin'); })->middleware('checkRol
 Route::get('hubin','HubinController@index')->name('hubin')->middleware(['checkRole:admin,hubin']);
 Route::get('siswa', function () { return view('siswa'); });
  ```
+## Percobaan
+Dalam projek ini admin dapat mengakses halaman hubin, home, dan siswa dan tidak sebaliknya. Middleware berfungsi untuk mengautentikasi http request yang masuk ke server. Jika user adalah admin maka routing ke halaman pembeli dan penjual dapat dilakukan dan tidak sebaliknya. Jalankan perintah php artisan untuk menjalankan project
+# home dengan menu register dan login
+![home page dengan menu register ](screenshot/2.png)
+
+# dashboard halaman hubin
+![dashboard hubin ](screenshot/1.png)
 
  Sekian tutorial cara mudah membuat multi user di laravel dengan middleware. Semoga bermanfaat, kurang lebihnya saya mohon maaf. Dan apabila ada pertanyaan silahkan tinggalkan di kolom komentar di bawah ini dan mari kita diskusikan bersama. Sampai jumpa di tutorial pemrograman lainnya.
