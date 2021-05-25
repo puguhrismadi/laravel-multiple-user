@@ -23,7 +23,8 @@ Projek ini adalah projek laravel di projek Aplikasi Tata Kelola Surat Menyurat d
 ## 1. Install Laravel
 
 1. Install Laravel
-Installah sebuah fresh laravel versi 7 dengan menjalankan perintah berikut ini di terminal atau cmd kalian. composer create-project --prefer-dist laravel/laravel:^7.0 latihan_middleware   
+Installah sebuah fresh laravel versi 7 dengan menjalankan perintah berikut ini di terminal atau cmd kalian. 
+`composer create-project --prefer-dist laravel/laravel:^7.0 latihan_middleware`   
 
 ## 2. Persiapan Database dan Migration
 
